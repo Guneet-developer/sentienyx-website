@@ -46,6 +46,8 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+
+        <script src="//code.tidio.co/lie5jlpa2gmixh3t4guzwifh0yvcjn4u.js" async></script>
       </body>
     </html>
   )
