@@ -2,24 +2,40 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-navy to-black py-12 shadow-2xl border-t border-accent/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-secondary/10 opacity-30"></div>
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <p className="mb-4 text-gray-300">
-          Email: <a href="mailto:sentienyx@gmail.com" className="text-accent hover:text-glow transition-colors duration-300 underline">sentienyx@gmail.com</a>
-        </p>
-        <p className="mb-4 text-gray-300">
-          Phone: <a href="tel:+91-9729069718" className="text-accent hover:text-glow transition-colors duration-300 underline">+91-9729069718</a>
-        </p>
-        <div className="flex justify-center space-x-6 mb-6">
-          <Link href="https://www.linkedin.com/in/sentienyx-ai-60641638b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-accent hover:text-glow hover:scale-125 transition-all duration-500" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </Link>
-          <Link href="https://x.com/sentienyx?t=V6DXPYAHKOV7ikj_T3fgqg&s=09" className="text-accent hover:text-glow hover:scale-125 transition-all duration-500" target="_blank" rel="noopener noreferrer">
-            X (Twitter)
-          </Link>
+    <footer className="bg-gradient-to-br from-black via-navy to-secondary/10 py-12 md:py-16 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-glow/5 opacity-50"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+          <div>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent mb-4">Sentienyx</h3>
+            <p className="text-gray-300">Elevating businesses with AI-powered solutions.</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-accent">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-300 hover:text-accent transition-colors duration-300">Home</Link></li>
+              <li><Link href="/pricing" className="text-gray-300 hover:text-accent transition-colors duration-300">Pricing</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-accent transition-colors duration-300">About</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-accent">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300">AI Consulting</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300">Automation</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300">Website Development</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-accent">Contact</h4>
+            <p className="text-gray-300">Email: info@sentienyx.com</p>
+            <p className="text-gray-300">Phone: +1 123 456 7890</p>
+          </div>
         </div>
-        <p className="text-gray-400">&copy; 2026 Sentienyx. All rights reserved.</p>
+        <div className="border-t border-accent/20 mt-8 pt-8 text-center">
+          <p className="text-gray-400">&copy; 2023 Sentienyx. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   )

@@ -2,62 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scroll-triggered animations */
-.fade-on-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.fade-on-scroll.in-view {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.slide-up-on-scroll {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
 }
 
-.slide-up-on-scroll.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
 }
 
-/* Advanced hover effects */
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
-  transform: scale(1.05);
-}
-
-.btn-neon {
-  background: linear-gradient(135deg, #00ffff, #8b5cf6);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-  transition: all 0.5s ease;
 }
 
-.btn-neon:hover {
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
-  transform: translateY(-5px);
+.hover-rotate {
+  transition: transform 0.3s ease;
 }
 
-/* Particle-like background effect */
-@keyframes particle-float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  100% {
-    transform: translateY(-100vh) rotate(360deg);
-  }
+.hover-rotate:hover {
+  transform: rotate(5deg);
 }
 
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(0, 255, 255, 0.5);
-  border-radius: 50%;
-  animation: particle-float 10s linear infinite;
+/* Ensure dark background */
+body {
+  background-color: #0a0a0a !important;
 }

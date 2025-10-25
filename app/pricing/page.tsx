@@ -30,20 +30,21 @@ export default function Pricing() {
     <div className="min-h-screen bg-gradient-to-br from-navy via-secondary/20 to-black py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-glow/10 opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h1 className="text-6xl font-bold text-center mb-12 text-white drop-shadow-2xl bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 md:mb-12 text-white drop-shadow-2xl bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent animate-fade-in">
           Our Pricing Plans
         </h1>
-        <p className="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-center text-gray-300 mb-12 md:mb-16 max-w-3xl mx-auto">
           Choose the perfect plan to elevate your business with Sentienyx's premium services. Transparent pricing, exceptional results.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white/10 to-gray-800/20 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-accent/20 hover:shadow-glow hover:scale-105 hover:border-glow/50 transition-all duration-700 group"
+              className="bg-gradient-to-br from-white/10 to-gray-800/20 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-2xl border border-accent/20 hover:shadow-glow hover:scale-105 hover:rotate-1 transition-all duration-700 group animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-accent group-hover:text-glow transition-colors duration-300">{plan.title}</h2>
-              <p className="text-4xl font-extrabold mb-6 text-accent drop-shadow-lg">{plan.price}</p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-accent group-hover:text-glow transition-colors duration-300">{plan.title}</h2>
+              <p className="text-3xl md:text-4xl font-extrabold mb-6 text-accent drop-shadow-lg">{plan.price}</p>
               <p className="text-gray-300 mb-6 leading-relaxed">{plan.desc}</p>
               <ul className="list-disc list-inside text-gray-400 space-y-2 mb-8">
                 {plan.features.map((feature, i) => (
@@ -59,11 +60,11 @@ export default function Pricing() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 md:mt-16">
           <p className="text-gray-400 mb-4">Our agent will reach out to you personally and talk about everything. They will set up a meeting with us when you click "Get Started" on the pricing page.</p>
           <a
             href="/contact"
-            className="inline-block bg-gradient-to-r from-glow to-secondary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-glow hover:scale-105 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-glow to-secondary text-white px-6 md:px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-glow hover:scale-105 transition-all duration-300"
           >
             Contact Us
           </a>

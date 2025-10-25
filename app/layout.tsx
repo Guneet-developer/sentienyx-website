@@ -7,28 +7,15 @@ import Footer from '../components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Sentienyx - AI Consulting & Automation Agency',
-  description: 'Premium AI consulting and automation services for enterprises. Chatbots, voice AI, and more.',
+  title: 'Sentienyx - AI Business Solutions',
+  description: 'Elevate your business with AI consulting, automation, and growth strategies.',
+  viewport: 'width=device-width, initial-scale=1.0',
+  keywords: 'AI consulting, business automation, AI solutions, Sentienyx',
   openGraph: {
-    title: 'Sentienyx - AI Consulting & Automation Agency',
-    description: 'Premium AI consulting and automation services for enterprises.',
-    url: 'https://sentienyx.com',
+    title: 'Sentienyx - AI Business Solutions',
+    description: 'Transform your business with cutting-edge AI.',
+    url: 'https://sentienyx.vercel.app',
     siteName: 'Sentienyx',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sentienyx - AI Consulting & Automation Agency',
-    description: 'Premium AI consulting and automation services for enterprises.',
-    images: ['/og-image.png'],
   },
 }
 
@@ -39,15 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={`${inter.className} bg-navy text-white`}>
+      <body className={`${inter.className} bg-navy text-white overflow-x-hidden scroll-smooth`}>
         <Header />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
-
-        <script src="//code.tidio.co/lie5jlpa2gmixh3t4guzwifh0yvcjn4u.js" async></script>
       </body>
     </html>
   )
