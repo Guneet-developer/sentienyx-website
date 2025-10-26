@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-black via-navy to-secondary/10 py-12 md:py-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-black via-primary to-secondary/10 py-12 md:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-glow/5 opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent mb-4">Sentienyx</h3>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent mb-4">CannumX</h3>
             <p className="text-gray-300">Elevating businesses with AI-powered solutions.</p>
           </div>
           <div>
@@ -29,12 +29,12 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">Contact</h4>
-            <p className="text-gray-300">Email: info@sentienyx.com</p>
+            <p className="text-gray-300">Email: info@cannumx.com</p>
             <p className="text-gray-300">Phone: +1 123 456 7890</p>
           </div>
         </div>
         <div className="border-t border-accent/20 mt-8 pt-8 text-center">
-          <p className="text-gray-400">&copy; 2023 Sentienyx. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2023 CannumX. All rights reserved.</p>
         </div>
       </div>
     </footer>
