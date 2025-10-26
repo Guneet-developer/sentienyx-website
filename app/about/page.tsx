@@ -1,74 +1,61 @@
-export default function Pricing() {
-  const pricingPlans = [
-    {
-      title: 'Business Consultancy',
-      price: '$50/hour',
-      desc: 'Expert consultation to solve business problems, provide strategic guidance, and help with growth and scaling.',
-      features: ['One-on-one meetings', 'Problem-solving sessions', 'Business strategy advice'],
-    },
-    {
-      title: 'AI Consultancy',
-      price: '$70/hour',
-      desc: 'Specialized AI consulting to integrate modern technology, optimize operations, and stay ahead of trends.',
-      features: ['AI implementation guidance', 'Technology awareness sessions', 'Custom AI solutions'],
-    },
-    {
-      title: 'AI Automation One Month Plan',
-      price: '$250/month',
-      desc: 'Comprehensive AI automation package for one month, tailored to your business needs.',
-      features: [
-        'AI chatbot integration on site',
-        'AI customer support for calling and WhatsApp and for site',
-        'AI marketing and personalized email sending to customers',
-        'AI consulting meeting 45 minutes every week',
-        'E-commerce abandoned cart recovery and AI integration according to business needs',
-      ],
-    },
-  ]
-
+export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy via-secondary/20 to-black py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-glow/10 opacity-50"></div>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-primary to-black py-16 md:py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-pink-500/20 opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 md:mb-12 text-white drop-shadow-2xl bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent animate-fade-in">
-          Our Pricing Plans
-        </h1>
-        <p className="text-lg md:text-xl text-center text-gray-300 mb-12 md:mb-16 max-w-3xl mx-auto">
-          Choose the perfect plan to elevate your business with Sentienyx's premium services. Transparent pricing, exceptional results.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {pricingPlans.map((plan, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-white/10 to-gray-800/20 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-2xl border border-accent/20 hover:shadow-glow hover:scale-105 hover:rotate-1 transition-all duration-700 group animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-accent group-hover:text-glow transition-colors duration-300">{plan.title}</h2>
-              <p className="text-3xl md:text-4xl font-extrabold mb-6 text-accent drop-shadow-lg">{plan.price}</p>
-              <p className="text-gray-300 mb-6 leading-relaxed">{plan.desc}</p>
-              <ul className="list-disc list-inside text-gray-400 space-y-2 mb-8">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="group-hover:text-gray-200 transition-colors duration-300">{feature}</li>
-                ))}
-              </ul>
-              <a
-                href="/contact"
-                className="w-full bg-gradient-to-r from-accent to-secondary text-navy font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-glow hover:scale-110 transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-accent block text-center"
-              >
-                Get Started
-              </a>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-10 text-white drop-shadow-lg animate-fade-in">About CannumX</h1>
+
+        <section className="mb-12 md:mb-16 animate-on-scroll">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">About Us</h2>
+          <p className="text-lg text-gray-200 leading-relaxed">
+            CannumX is an AI automation agency founded by Guneet Taneja with Co-founder Akhil. We are a team of ambitious and obsessed people trying to help businesses adapt the new technology and solve their business problems. We are a team of people who are really advanced in AI, tech and business skills which are determined to help you and your business!
+          </p>
+        </section>
+
+        <section className="mb-12 md:mb-16 animate-on-scroll">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How We Are Going to Help You</h2>
+          <p className="text-lg text-gray-200 leading-relaxed mb-6">
+            We are here to help you with all your business problems. We provide AI consulting, automation solutions, website development, marketing, and more. Our goal is to make your business more efficient and profitable using cutting-edge technology.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-6 bg-primary/50 backdrop-blur-md rounded-2xl shadow-2xl border border-accent/20 hover-glow hover:scale-105 transition-all duration-500">
+              <h3 className="text-xl font-semibold mb-4 text-accent">AI Consulting</h3>
+              <p className="text-gray-300">Get expert advice on integrating AI into your operations for better decision-making and efficiency.</p>
             </div>
-          ))}
-        </div>
-        <div className="text-center mt-12 md:mt-16">
-          <p className="text-gray-400 mb-4">Our agent will reach out to you personally and talk about everything. They will set up a meeting with us when you click "Get Started" on the pricing page.</p>
+            <div className="p-6 bg-primary/50 backdrop-blur-md rounded-2xl shadow-2xl border border-accent/20 hover-glow hover:scale-105 transition-all duration-500">
+              <h3 className="text-xl font-semibold mb-4 text-accent">Automation Solutions</h3>
+              <p className="text-gray-300">Automate repetitive tasks with AI tools to save time and reduce costs.</p>
+            </div>
+            <div className="p-6 bg-primary/50 backdrop-blur-md rounded-2xl shadow-2xl border border-accent/20 hover-glow hover:scale-105 transition-all duration-500">
+              <h3 className="text-xl font-semibold mb-4 text-accent">Website Development</h3>
+              <p className="text-gray-300">Build modern, responsive websites tailored to your business needs.</p>
+            </div>
+            <div className="p-6 bg-primary/50 backdrop-blur-md rounded-2xl shadow-2xl border border-accent/20 hover-glow hover:scale-105 transition-all duration-500">
+              <h3 className="text-xl font-semibold mb-4 text-accent">Marketing & SEO</h3>
+              <p className="text-gray-300">Enhance your online presence with AI-driven marketing and SEO strategies.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12 md:mb-16 animate-on-scroll">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Our Mission</h2>
+          <p className="text-lg text-gray-200 leading-relaxed">
+            Our mission is to empower businesses with AI technology, helping them stay ahead in a rapidly evolving digital world. We believe in innovation, quality, and delivering results that matter.
+          </p>
+        </section>
+
+        <section className="animate-on-scroll">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Contact Us</h2>
+          <p className="text-lg text-gray-200 leading-relaxed mb-6">
+            Ready to get started? Reach out to us for a free consultation.
+          </p>
           <a
             href="/contact"
-            className="inline-block bg-gradient-to-r from-glow to-secondary text-white px-6 md:px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-glow hover:scale-105 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-accent to-secondary text-primary px-8 py-4 rounded-full font-bold shadow-lg hover-glow hover:scale-110 transition-all duration-500"
           >
-            Contact Us
+            Get In Touch
           </a>
-        </div>
+        </section>
       </div>
     </div>
   )

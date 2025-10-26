@@ -8,14 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navy: '#0a0a0a',
-        accent: '#00ffff',
-        secondary: '#ff00ff',
-        glow: '#ffff00',
+        primary: '#0f172a', // Darker navy
+        secondary: '#581c87', // Darker purple
+        accent: '#0e7490', // Darker cyan
+        glow: '#4d7c0f', // Darker lime
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-out',
         'fade-in-up': 'fadeInUp 1s ease-out',
+        'bounce-slow': 'bounce 2s infinite',
       },
       keyframes: {
         fadeIn: {
